@@ -366,6 +366,34 @@ button {
      right: 30px;
 }
 
+
+.bk_btn {
+    background-color: #fe0000;
+    max-width: 321px;
+    width: 170%;
+    margin-bottom: 634%;
+    padding: 10px 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    transition: ease-in 0.5s;
+    display: block;
+}
+
+
+.bok_btn {
+    background-color: #000000;
+    max-width: 321px;
+    width: 170%;
+    margin-bottom: 634%;
+    padding: 10px 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    transition: ease-in 0.5s;
+    display: block;
+}
+
 .book_btn {
      background-color: #fe0000;
      max-width: 189px;

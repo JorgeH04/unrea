@@ -57,11 +57,11 @@ const Main = () => {
           <div class="row">
              <div class="col-md-5">
                 <div class="book_room">
-                   <h1>Book a Room Online</h1>
+                   <h1>Send your donation</h1>
                    <form class="book_now">
                       <div class="row">
                          <div class="col-md-12">
-                            <span>Arrival</span>
+                            <span>Amount</span>
                              <input 
                                 class="online_book" 
                                 placeholder="0.0" 
@@ -70,7 +70,7 @@ const Main = () => {
                                 />
                          </div>
                          <div class="col-md-12">
-                            <span>Departure</span>
+                            <span>Address</span>
                              <input 
                                  class="online_book" 
                                  placeholder="0x..." 
@@ -81,7 +81,7 @@ const Main = () => {
                          <div class="col-md-12">
                             <button 
                                onClick={e => handleSubmit(e)}
-                               class="book_btn">Book Now
+                               class="book_btn">Confirm
                              </button>
                          </div>
                       </div>

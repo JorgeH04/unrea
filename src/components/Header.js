@@ -4,6 +4,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 import { AiOutlineDown } from 'react-icons/ai'
 import { HiOutlineDotsVertical } from 'react-icons/hi'
 import { TransactionContext } from '../context/TransactionContext'
+import { Link } from 'react-router-dom'
 //import { client } from '../lib/sanityClient'
  
 
@@ -40,11 +41,8 @@ const Header = () => {
   }, [currentAccount])
 
   return (
-  
-
     <>
-
-          <header>
+        <header>
           <div class="header">
             <div class="container">
                <div class="row">
@@ -52,7 +50,8 @@ const Header = () => {
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                             <Link to="/" class="nav-link"><img src="images/logo.png" alt="#" /></Link>
+                              <a></a>
                            </div>
                         </div>
                      </div>
@@ -65,43 +64,43 @@ const Header = () => {
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item active">
-                                 <a class="nav-link" href="index.html">Home</a>
+                                 <Link to="/" class="nav-link">Home</Link>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="about.html">About</a>
+                                <Link to="/transactionhistory" class="nav-link">Transaction history</Link>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="room.html">Our room</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="gallery.html">Gallery</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="blog.html">Blog</a>
-                              </li>
+                       
+
                               {currentAccount ? (
                                <>
-                              <span >
-                                {currentAccount.slice(0, 6)}...{currentAccount.slice(39)}
-                               </span>
-                              <button
-                                   
-                               >
-                                  Logout
-                                </button>
+                                <li class="nav-item">
+                                      <a class="nav-link" >
+                                      {currentAccount.slice(0, 6)}...{currentAccount.slice(39)}
+                                      </a>
+                                </li>
+
+                                <li class="nav-item">
+                                  <button
+                                      class="bk_btn"
+                                      onClick={() => connectWallet()}
+                                      >
+                                      Logout
+                                   </button>
+                                </li>
+ 
                               </>
                              ) : (
-                                <button
-                                 onClick={() => connectWallet()}
-                                  >
-                                   Connect Wallet
+                               <li class="nav-item">
+                                 <button
+                                     class="bok_btn"
+                                     onClick={() => connectWallet()}
+                                     >
+                                     Connect Wallet
                                   </button>
-                               )}
-
-                           
-                              <li class="nav-item">
-                                 <a class="nav-link" href="contact.html">Contact Us</a>
                               </li>
+                             )}
+                              
+ 
                            </ul>
                         </div>
                      </nav>
@@ -110,7 +109,6 @@ const Header = () => {
             </div>
          </div>
       </header>
-
     </>
   )
 }
