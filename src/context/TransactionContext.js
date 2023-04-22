@@ -95,12 +95,7 @@ export const TransactionProvider = ({ children }) => {
     setFormData(prevState => ({ ...prevState, [name]: e.target.value }))
   }
  
-  const saveTransaction = async (
-    txHash,
-    amount,
-    fromAddress = currentAccount,
-    toAddress,
-  ) => {
+  const saveTransaction = async (txHash, amount, fromAddress = currentAccount, toAddress,) => {
     const txDoc = {
       _type: 'transactions',
       _id: txHash,
